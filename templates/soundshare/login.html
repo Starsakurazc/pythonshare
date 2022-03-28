@@ -1,0 +1,42 @@
+{% extends 'soundshare/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+	Music
+{% endblock %}
+
+{% block body_block %}
+        <div id="login">
+            <div id="logo" onclick="javascript:document.getElementById('03').click()">
+                <img id="logo3"  alt="logo" src="{% static 'image/Soundshare.png' %}">
+                <a id="03" href="/soundshare/"></a>
+            </div>
+            <div id="mid">
+                <div id="pic">
+                    <img id="pic1" src="{% static 'image/pic3.png' %}">
+                </div>
+                <div id="ls">
+                    <div id="login-login" style="color:#ff9427" onclick="javascript:document.getElementById('04').click()">
+                        Sign in
+                        <a id="04" href="/soundshare/login/"></a>
+                    </div>
+                    <div id="login-reg" onclick="javascript:document.getElementById('05').click()">
+                        Sign up
+                        <a id="05" href="/soundshare/signup/"></a>
+                    </div>
+                    <div class="input-t-p">
+                        <form id="login_form" method="post" action="{% url 'login' %}">
+                            {% csrf_token %}
+                            <label><input type="text" required="required" placeholder="Username" name="username"></label>
+                            <label><input type="password" required="required" placeholder="Password" name="password"></label>
+
+                            <button class="but-sub" type="submit">Sign in</button>
+                        </form>
+                        <div id="forgetpss">
+                            <a href="/soundshare/forgetpassword/"> Forget Password </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

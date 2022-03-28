@@ -1,0 +1,131 @@
+{% extends 'soundshare/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+	Index
+{% endblock %}
+
+{% block body_block %}
+<!--------Index----------->
+	<div class="banner">
+		<div class="background">
+			<div class="arrows">
+				<div class="picture">
+					<ul class="outer">
+						<li>
+							<img class="pic1" src="{% static 'image/banner1.png' %}" alt="test1">
+						</li>
+						<li>
+							<img class="pic1" src="{% static 'image/banner2.png' %}" alt="test2">
+						</li>
+						<li>
+							<img class="pic1" src="{% static 'image/banner1.png' %}" alt="test1">
+						</li>
+					</ul>
+					<div id="navdiv">
+						<a class="a1" href="javascript:;"></a>
+						<a class="a1" href="javascript:;"></a>
+					</div>
+				</div>
+				<div class="music">
+					<div class="music-left">
+						<div class="part1">
+							<div class="square">
+								<div>
+								<img class="logo2" src="{% static 'image/music_note.png' %}">
+								<div id="word1">Most views</div>
+								<div id="word2">Blue</div>
+								<div id="word3">Jazz</div>
+								<div id="word4">Classic</div>
+								<div id="word5">Pop</div>
+								<div id="word6"><a href="{% url 'music' %}">MORE→</a></div>
+							</div>
+							<div>
+								<img class="fg1" src="{% static 'image/fg1.png' %}">
+							</div>
+								<div class="firstline">
+									{% if most_views_music %}
+										<ul class="square1234">
+											{% for music in most_views_music %}
+											<li>
+												<a href="{% url 'music' music.title %}">
+													{% if music.image == "/static/image/song_photo_default.png" %}
+														<img width="150" height="150" src="{{ music.image }}">
+													{% else %}
+														<img width="150" height="150" src="{{ music.image.url }}">
+													{% endif %}
+													title: {{ music.title }} </br>
+													views: {{ music.views }} </br>
+													likes: {{ music.likes }}
+												</a>
+											</li>
+											{% endfor %}
+										</ul>
+									{% endif %}
+								</div>
+							</div>
+							<div class="square2">
+								<div>
+									<img id="logo2" src="{% static 'image/music_note.png' %}">
+									<div id="w1">Most likes</div>
+									<div id="w2">Blue</div>
+									<div id="w3">Jazz</div>
+									<div id="w4">Classic</div>
+									<div id="w5">Pop</div>
+									<div id="w6"><a href="{% url 'music' %}">MORE→</a></div>
+								</div>
+								<div>
+									<img class="fg1" src="{% static 'image/fg2.png' %}">
+								</div>
+								<div class="firstline">
+									{% if most_likes_music %}
+										<ul class="square1234">
+											{% for music in most_likes_music %}
+											<li>
+												<a href="{% url 'music' music.title %}">
+													{% if music.image == "/static/image/song_photo_default.png" %}
+														<img width="150" height="150" src="{{ music.image }}">
+													{% else %}
+														<img width="150" height="150" src="{{ music.image.url }}">
+													{% endif %}
+													title: {{ music.title }} </br>
+													views: {{ music.views }} </br>
+													likes: {{ music.likes }}
+												</a>
+											</li>
+											{% endfor %}
+										</ul>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="music-right">
+						<div id="singer">
+							Musician-Join us
+							<div id="checkmore">
+								<a href="{% url 'music' %}">MORE→</a>
+							</div>
+						</div>
+						<div id="singer-border">
+							<div class="singer-pic">
+							{% if all_creators %}
+								{% for creator in all_creators %}
+										<div class="singer-name">
+											<a href="{% url 'music' creator.firstname %}">{{ creator.firstname }}, {{ creator.lastname }}</a>
+										</div>
+										{% if creator.image == "/static/image/user_photo_default.png" %}
+											<img width="150" height="150" src="{{ creator.image }}">
+										{% else %}
+											<img width="150" height="150" src="{{ creator.image.url }}">
+										{% endif %}
+								{% endfor %}
+							{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

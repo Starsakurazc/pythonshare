@@ -1,0 +1,575 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+	font-family: bgtx;
+	src: url("../font/bgtx-font.ttf");
+}
+@font-face {
+	font-family: wljh;
+	src: url("../font/wljh-font.ttf");
+}
+@font-face {
+	font-family: cxh;
+	src: url("../font/cxh-font.ttf");
+}
+body{
+	width: 100%;
+	height: 100%;
+	border: 0;
+	margin: 0 auto;
+	padding: 0;
+}
+div{
+	display: block;
+}
+
+.nav {
+	position: relative;
+	height: 100px;
+	box-sizing: border-box;
+	background: black;
+	border-bottom: 1px solid #000;
+}
+.nav .top{
+    width: 1300px;
+    margin: 0 auto;
+}
+.nav .top .guide{
+	margin: 0 auto;
+	width: 100%;
+	height: 100px;
+}
+.nav .top .guide li{
+	list-style: none;
+	float: left;
+	width: 105px;
+	height: 100%;
+	line-height: 100px;
+	text-align: center;
+	font-family: wljh;
+	font-size: 18px;
+	color: white;
+	
+}
+.nav .top .guide .logo{
+    width:300px;
+}
+.nav .top .guide .logo .logopic{
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+}
+.nav .top .guide .ser{
+	width: 350px;
+	height: 100%;
+}
+.nav .top .guide .choose{
+	color:white;
+}
+.nav .top .guide .l1:hover{
+	background-color: #333333;
+}
+.nav .top .guide .l2:hover{
+	background-color: #333333;
+}
+.nav .top .guide .l3:hover{
+	background-color: #333333;
+}
+.nav .top .guide .choose:hover{
+	background-color: #333333;
+}
+.nav .top .guide .login{
+	display: block;
+    font-size: 15px;
+    color: #787878;
+}
+
+.banner{
+	position: relative;
+	min-height: 1250px;
+	box-sizing: border-box;
+	z-index: 0;
+	;
+}
+.banner .background{
+	width: 100%;
+	height: 350px;
+	background:url(../image/background.jpg)
+}
+.banner .background .arrows{
+	z-index: 2;
+	width: 912px;
+	min-height: 1250px;
+	margin: 0 auto;
+}
+.banner .background .arrows .picture{
+	width: 912px;
+	height: 350px;
+	position: relative;
+	margin: 0 auto;
+	z-index: 3;
+	overflow: hidden;
+}
+.banner .background .arrows .picture .outer{
+	list-style: none;
+	position: absolute;
+	padding: 0;
+}
+.banner .background .arrows .picture #navdiv{
+	position: absolute;
+	bottom: 15px;
+	z-index: 999;
+	left: 470px;
+}
+.banner .background .arrows .picture #navdiv a{
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: red;
+	margin: 0 5px;
+	opacity: 0.5;
+	z-index: 1000;
+}
+.musicpage:hover{
+	background-color: #333333;
+}
+.banner .background .arrows .picture #navdiv a:hover{
+	background: #000000;
+}
+.banner .background .arrows .picture li{
+	float: left;
+}
+.banner .background .arrows .picture .outer .pic1{
+	width: 912px;
+	height: 335px;
+	margin: 0 auto;
+	z-index: 4;
+}
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.banner .background .arrows .music{
+	position: relative;
+	width: 911px;
+	min-height: 1028px;
+	margin: 0 auto;
+	border: 1px solid #d3d3d3;
+	border-width: 0 1px;
+	z-index: 0;
+	top: 20px;
+}
+.banner .background .arrows .music .music-left{
+	position: absolute;
+	width: 650px;
+	height: 100%;
+	border: 1px solid #d3d3d3;
+	border-width: 0 1px;
+}
+.banner .background .arrows .music .music-left .logo2{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 10px;
+}
+.banner .background .arrows .music .music-left .part1{
+	width: 100%;
+	height: 85px;
+}
+.banner .background .arrows .music .music-left .fg1{
+	position: absolute;
+	width: 100%;
+	height: 75px;
+	top: 40px;
+}
+.banner .background .arrows .music .music-left #word1{
+	height: 40px;
+	width: 150px;
+	position: absolute;
+	left: 40px;
+	top: 20px;
+	margin: 0 auto;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #word2{
+	position: absolute;
+	left: 200px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	border-right: 1px solid #000;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #word3{
+	position: absolute;
+	left: 262px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	border-right: 1px solid #000;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #word4{
+	position: absolute;
+	left: 324px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	border-right: 1px solid #000;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #word5{
+	position: absolute;
+	left: 386px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #word6{
+	position: absolute;
+	right: 0px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: bgtx;
+}
+.square{
+	position: relative;
+	width: 650px;
+	height: 600px;
+	border-bottom: 1px solid #000;
+}
+.square .firstline{
+	position: relative;
+	top: 80px;
+	height: 214px;
+	width: 100%;
+	text-align: center;
+}
+.square .firstline .square1234{
+	margin: 0 auto;
+	width: 650px;
+	height: 214px;
+	padding: 0px;
+	list-style:none;
+}
+.square .firstline .square1234 li{
+	list-style: none;
+	margin: 41px 15px;
+	float: left;
+	width: 130px;
+	height: 130px;
+	text-align: center;
+}
+
+.square2{
+	position: relative;
+	height: 514px;
+	width: 650px;
+}
+#logo2{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 10px;
+}
+.banner .background .arrows .music .music-left #w1{
+	height: 40px;
+	width: 150px;
+	position: absolute;
+	left: 40px;
+	top: 20px;
+	margin: 0 auto;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #w2{
+	position: absolute;
+	left: 200px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	border-right: 1px solid #000;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #w3{
+	position: absolute;
+	left: 262px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	border-right: 1px solid #000;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #w4{
+	position: absolute;
+	left: 324px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	border-right: 1px solid #000;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #w5{
+	position: absolute;
+	left: 386px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: bgtx;
+}
+.banner .background .arrows .music .music-left #w6{
+	position: absolute;
+	right: 0px;
+	top: 20px;
+	height: 20px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: bgtx;
+}
+.square2 .firstline{
+	position: relative;
+	top: 80px;
+	height: 214px;
+	width: 100%;
+	text-align: center;
+}
+.square2 .firstline .square1234{
+	margin: 0 auto;
+	width: 650px;
+	height: 214px;
+	padding: 0px;
+	list-style:none;
+}
+.square2 .firstline .square1234 li{
+	list-style: none;
+	margin: 41px 15px;
+	float: left;
+	width: 130px;
+	height: 130px;
+}
+
+.square1234 li video {
+	width: 130px;
+	height: 130px;
+}
+
+.square2 .secondline{
+	position: absolute;
+	top: 299px;
+	height: 214px;
+	width: 100%;
+}
+.square2 .secondline .square1234{
+	margin: 0 auto;
+	width: 650px;
+	height: 214px;
+	padding: 0px;
+	list-style:none;
+}
+.square2 .secondline .square1234 li{
+	list-style: none;
+	margin: 41px 15px;
+	float: left;
+	width: 130px;
+	height: 130px;
+	text-align: center;
+}
+
+#se1{
+	position: absolute;
+	max-height: 41px;
+	max-width: 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	left: 15px;
+	bottom: 20px;
+	font-family: cxh;
+	font-weight: bold;
+}
+#se2{
+	position: absolute;
+	max-height: 41px;
+	max-width: 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	left: 178px;
+	bottom: 20px;
+	font-family: cxh;
+	font-weight: bold;
+}
+#se3{
+	position: absolute;
+	max-height: 41px;
+	max-width: 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	left:340px;
+	bottom: 20px;
+	font-family: cxh;
+	font-weight: bold;
+}
+#se4{
+	position: absolute;
+	max-height: 41px;
+	max-width: 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	left: 502px;
+	bottom: 20px;
+	font-family: cxh;
+	font-weight: bold;
+}
+#se5{
+	position: absolute;
+	max-height: 41px;
+	max-width: 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	left: 15px;
+	bottom: 20px;
+	font-family: cxh;
+	font-weight: bold;
+}
+#se6{
+	position: absolute;
+	max-height: 41px;
+	max-width: 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	left: 178px;
+	bottom: 20px;
+	font-family: cxh;
+	font-weight: bold;
+}
+#se7{
+	position: absolute;
+	max-height: 41px;
+	max-width: 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	left:340px;
+	bottom: 20px;
+	font-family: cxh;
+	font-weight: bold;
+}
+#se8{
+	position: absolute;
+	max-height: 41px;
+	max-width: 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	left: 502px;
+	bottom: 20px;
+	font-family: cxh;
+	font-weight: bold;
+}
+.banner .background .arrows .music .music-right{
+	position: relative;
+	width: 260px;
+	left: 651px;
+	height: 100%;
+}
+.banner .background .arrows .music .music-right #singer{
+	text-align: center;
+	position: absolute;
+	font-family: bgtx;
+	font-size: 24px;
+	height: 30px;
+	width: 200px;
+	left: 30px;
+	border-bottom: 1px solid black;
+}
+#singer-border {
+	position: absolute;
+	width: 200px;
+	height: 85px;
+	left: 30px;
+	top:60px ;
+}
+
+#singer-border img {
+    width:90px;
+    height:90px;
+    border-right: 1px solid black;
+}
+
+#checkmore{
+	position: absolute;
+	top: 30px;
+	right: 15px;
+	font-family: bgtx;
+	font-size: 18px;
+}
+.singer-pic{
+	width: 85px;
+	height: 86px;
+}
+.singer-name{
+	width: 115px;
+	height: 90px;
+	line-height: 90px;
+	position: absolute;
+	left: 90px;
+	overflow: hidden;
+	margin: 0px 5px;
+	text-align: center;
+    border: 1px solid black;
+}
+
+#form2{
+	position: relative;
+	height: 40px;
+	border-radius: 15px;
+	width: 350px;
+	top: 20px;
+}
+#but{
+	background-color: white;
+	position: absolute;
+	left: 817px;
+	top: 42px;
+	border: 1px solid black;
+}
+
+
+#but:hover{
+	background-color: cadetblue;
+	min-height: 1500px;
+}
+#but2:hover{
+	background-color: cadetblue;
+}
+#form1{
+	position: relative;
+}
+
+#before_login {
+    margin-left: 600px;
+	display: block;
+    font-size: 15px;
+    color: #787878;
+}
